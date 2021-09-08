@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace CSharpStudy
 {
     public class Ticket
     {
-        private double fee;
+        private long fee;
 
-        public double getFee()
+        public long getFee()
         {
             return fee;
         }

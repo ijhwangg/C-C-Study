@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace CSharpStudy
 {
     public class Audience
     {
@@ -14,9 +14,9 @@ namespace ConsoleTest
             this.bag = bag;
         }
 
-        public Bag GetBag()
+        public long buy(Ticket ticket)
         {
-            return bag;
+            return bag.Hold(ticket);
         }
     }
 }

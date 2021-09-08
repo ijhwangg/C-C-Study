@@ -3,32 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace CSharpStudy
 {
     public class TicketOffice
     {
-        private double amount;
+        private long amount;
         private List<Ticket> tickets = new List<Ticket>();
-
-        public TicketOffice(double amount, IEnumerable<Ticket> tickets)
+       
+        public void sellTicketTo(Audience audience)
         {
-            this.amount = amount;
-            this.tickets.AddRange(tickets);
+            plusAmount(audience.buy(GetTicket()));
         }
 
-        public Ticket GetTicket()
+        private Ticket GetTicket()
         {
             var firstTicket = tickets[0];
             tickets.RemoveAt(0);
             return firstTicket;
         }
 
-        public void minusAmount(double amount)
-        {
-            this.amount -= amount;
-        }
-
-        public void plusAmount(double amount)
+        private void plusAmount(long amount)
         {
             this.amount += amount;
         }
