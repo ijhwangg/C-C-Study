@@ -44,8 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hello.cs" />
+    <Compile Include="Audience.cs" />
+    <Compile Include="Bag.cs" />
+    <Compile Include="Invitation.cs" />
+    <Compile Include="MainApp.cs" />
+    <Compile Include="Theater.cs" />
+    <Compile Include="Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TicketOffice.cs" />
+    <Compile Include="TicketSeller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
