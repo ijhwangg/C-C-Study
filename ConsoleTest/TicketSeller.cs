@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace CSharpStudy
 {
     public class TicketSeller
     {
@@ -14,9 +14,9 @@ namespace ConsoleTest
             this.ticketOffice = ticketOffice;
         }
 
-        public TicketOffice GetTicketOffice()
+        public void sellTo(Audience audience)
         {
-            return ticketOffice;
+            ticketOffice.sellTicketTo(audience);
         }
     }
 }

@@ -3,48 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace CSharpStudy
 {
     public class Bag
     {
         private Invitation invitation;
-        private double amount;
+        private long amount;
         private Ticket ticket;
-        public Bag(double amount)
+
+        public long Hold(Ticket ticket)
         {
-            this.invitation = null;
-            this.amount = amount;
-        }
-        public Bag(Invitation invitation, double amount)
-        {
-            this.invitation = invitation;
-            this.amount = amount;
+            if (hasInvitation())
+            {
+                setTicket(ticket);
+                return 0L;
+            }
+            else
+            {
+                setTicket(ticket);
+                minusAmount(ticket.getFee());
+                return ticket.getFee();
+            }
         }
 
-        public bool hasTicket()
-        {
-            return ticket != null;
-        }
-
-        public bool hasInvitation()
+        private bool hasInvitation()
         {
             return invitation != null;
         }
 
-        public void setTicket(Ticket ticket)
+        private void setTicket(Ticket ticket)
         {
             this.ticket = ticket;
         }
 
-        public void minusAmount(double amount)
+        private void minusAmount(long amount)
         {
             this.amount -= amount;
         }
-
-        public void plusAmount(double amount)
-        {
-            this.amount += amount;
-        }
     }
-    
 }
